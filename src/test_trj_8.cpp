@@ -85,7 +85,7 @@ int main(int argc, char **argv)
   cout << "takeoff_z:" << takeoff_z << endl;
   circle_r = 0.5;
   circle_l = 1;
-  circle_time = 8;
+  circle_time = 5;
   int round = 1;
 
   ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
@@ -245,7 +245,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*circle_r, 0.0, 1.2,
                                2*circle_r+circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -261,7 +261,7 @@ int main(int argc, char **argv)
       static circleTrj circle1(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)+circle_r, 0.0, 1.2,
-                               2*PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               2*PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle1.getPose(ros::Time::now().toSec(),pose);
       if(circle1.finished())
       {
@@ -277,7 +277,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)-circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -324,7 +324,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*circle_r, 0.0, 1.2,
                                2*circle_r+circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -340,7 +340,7 @@ int main(int argc, char **argv)
       static circleTrj circle1(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)+circle_r, 0.0, 1.2,
-                               2*PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               2*PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle1.getPose(ros::Time::now().toSec(),pose);
       if(circle1.finished())
       {
@@ -356,7 +356,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)-circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -404,7 +404,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*circle_r, 0.0, 1.2,
                                2*circle_r+circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -420,7 +420,7 @@ int main(int argc, char **argv)
       static circleTrj circle1(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)+circle_r, 0.0, 1.2,
-                               2*PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               2*PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle1.getPose(ros::Time::now().toSec(),pose);
       if(circle1.finished())
       {
@@ -436,7 +436,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)-circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -483,7 +483,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*circle_r, 0.0, 1.2,
                                2*circle_r+circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
@@ -499,7 +499,7 @@ int main(int argc, char **argv)
       static circleTrj circle1(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)+circle_r, 0.0, 1.2,
-                               2*PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               2*PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle1.getPose(ros::Time::now().toSec(),pose);
       if(circle1.finished())
       {
@@ -515,7 +515,7 @@ int main(int argc, char **argv)
       static circleTrj circle2(ros::Time::now().toSec(),
                                2*(circle_r+circle_l), 0.0, 1.2,
                                2*(circle_r+circle_l)-circle_l, 0.0, 1.2,
-                               -PI,circle_time,CIRCLE_TRJ_FACING_FIXED);
+                               -PI,2*circle_time,CIRCLE_TRJ_FACING_FIXED);
       circle2.getPose(ros::Time::now().toSec(),pose);
       if(circle2.finished())
       {
